@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+    letter-spacing: 2px;
+}
+
+nav ul li a::before {
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    bottom: 0;
+    transition: all 500ms;
+}
+
+nav ul li a:hover {
+    color: white;
+    opacity: 100;
+}
+
+/* nav ul li a.active::before {
+    width: 80%;
+} */
+
+nav ul li a:hover::before {
+    width: 80%;
+}
+
+.slider-container {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    isolation: isolate;
+}
+
+.slider-container .slider-item {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    position: absolute;
+    transition: opacity 3000ms;
+}
+
+.slider-container .slider-item[data-show="show"] {
+    opacity: 1;
+}
+
+
+.slider-container .slider-item[data-show="hidden"] {
+    z-index: -1;
+    opacity: 0;
+}
+
+.slider-container .slider-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.200), transparent);
+}
+
+.slider-container .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-item .slider-content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.slider-content .slider-title {
+    font-size: 6rem;
+}
+
+.slider-content .slider-description {
+    width: 50ch;
+    line-height: 1.5;
+}
+
+.slider-content .slider-action {
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: fit-content;
+    position: relative;
+    isolation: isolate;
+    transition: all 500ms;
+}
+
+.slider-content .slider-action::before {
+    content: '';
+    background-color: white;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 0;
+    transition: all 500ms;
+}
+
+.slider-content .slider-action:hover {
+    color: black;
+}
+
+.slider-content .slider-action:hover::before {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}

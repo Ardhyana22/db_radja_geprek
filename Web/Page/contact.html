@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kontak Kami | Radja Geprek</title>
+    <link rel="stylesheet" href="Styles/stylecontact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../Page/index.html">Home</a></li>
+                <li><a href="../Page/menu.html">Menu</a></li>
+                <li><a href="../Page/about.html">About</a></li>
+                <li><a href="../Page/contact.html">Contact</a></li>
+                <li><a id="keranjang" href="#shop"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h1>Hubungi Kami</h1>
+                <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan, kami siap membantu Anda. Jangan ragu untuk menghubungi kami melalui formulir di bawah ini atau dengan informasi kontak di samping.</p>
+                
+                <div class="contact-details">
+                    <div class="detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Alamat</h3>
+                        <p>Jl. Sriwijaya 1</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Telepon</h3>
+                        <p>+62 895-2021-1902</p>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>radjageprek@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Kirim Pesan</h2>
+                <form action="/submit" method="POST">
+                    <input type="text" name="name" placeholder="Nama Anda" required>
+                    <input type="email" name="email" placeholder="Email Anda" required>
+                    <textarea name="message" placeholder="Pesan Anda" rows="6" required></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Radja Geprek All Rights Reserved.</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
